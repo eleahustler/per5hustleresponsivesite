@@ -10,6 +10,33 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"> 
     <link rel="stylesheet" href="css/bootstrap.min.css">                                     
     <link rel="stylesheet" href="css/style.css">
+	<style>
+		/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+	</style>
 
 
 </head>
@@ -61,22 +88,55 @@
 
         <section class="section">
             <div class="container-fluid">
-                <div class="row 2-rows-sm-swap"></div>
+                <div class="row 2-rows-sm-swap">z</div>
                 
                 <div class="row margin-t-mid"></div>
 				<button class="accordion">What are your hours of opperation?</button>
 <div class="panel">
-  <p>We ar open 7 days a week from 6:00 a.m to 10:00 p.m. Last wash is recommended by 8:30 p.m.</p>
+  <p>We are open 7 days a week from 6:00 a.m to 10:00 p.m. Last wash is recommended by 8:30 p.m.</p>
 </div>
 
-<button class="accordion">Section 2</button>
+<button class="accordion">Do you offer wash and fold service?</button>
 <div class="panel">
-  <p>Lorem ipsum...</p>
+  <p>Yes! Our wash and fold service is available daily. Drop off your laundry and we will clean, dry, and neatly fold it for you—usually ready the same day.
+</p>
 </div>
 
-<button class="accordion">Section 3</button>
+<button class="accordion">What types of machines do you have?
+</button>
 <div class="panel">
-  <p>Lorem ipsum...</p>
+  <p> We offer a full range of high-capacity washers and dryers, including machines large enough for blankets, comforters, and bulky items.
+.</p>
+</div>
+				<button class="accordion">Can I pay with a card, or is it coin-only?
+
+</button>
+<div class="panel">
+  <p>  We accept coins, credit/debit cards, and mobile payments on most machines. Change machines are also available inside.
+
+.</p>
+</div>
+				<button class="accordion"> Are attendants on site?
+
+</button>
+<div class="panel">
+  <p>Yes, we have friendly attendants available throughout the day to assist with questions, machine issues, and wash-and-fold orders.
+
+.</p>
+</div>
+				<button class="accordion">Do you offer free Wi-Fi?
+
+</button>
+<div class="panel">
+  <p> Yes! Customers can enjoy free Wi-Fi while they wait. We also provide seating and charging outlets.
+
+.</p>
+</div>
+				<button class="accordion"> Is parking available?
+</button>
+<div class="panel">
+  <p> We offer a full range of high-capacity washers and dryers, including machines large enough for blankets, comforters, and bulky items.
+.</p>
 </div>
 
                 <div class="row margin-t-mid"></div>
@@ -104,6 +164,26 @@
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> 
         <script src="js/bootstrap.min.js"></script>
+		<script>
+		var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+		</script>
        
 </body>
 </html>
